@@ -7,7 +7,7 @@ class TreeNode:
         self.right = None
 class Solution:
     def Print(self, pRoot):
-        # write code here
+        # write code here    
         if not pRoot:
             return []
         res=[]
