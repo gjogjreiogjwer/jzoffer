@@ -1,8 +1,13 @@
 # -*- coding:utf-8 -*-
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+# 反转链表
+# 输入一个链表，反转链表后，输出链表的所有元素。
+# 解：设置两个指针temp和cur，替换得到1-->none, 2-->1,3-->2....
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 class Solution:
     # 返回ListNode
     def ReverseList(self, pHead):
@@ -11,19 +16,11 @@ class Solution:
         	return pHead
         cur=None
         while pHead:
-        	tmp=pHead
+        	temp=pHead
         	pHead=pHead.next
-        	tmp.next=cur
-        	cur=tmp
+        	temp.next=cur
+        	cur=temp
         return cur
-
-
-
-
-class ListNode:
-    def __init__(self,x):
-        self.val=x
-        self.next=None
 
 if __name__ == '__main__':
     q=ListNode(1)
@@ -32,4 +29,4 @@ if __name__ == '__main__':
     q.next=w
     w.next=e
     b=Solution()
-    print b.ReverseList(q).next.next.next
+    print b.ReverseList(q).next.next.val
