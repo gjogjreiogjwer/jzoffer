@@ -1,8 +1,15 @@
 # -*- coding:utf-8 -*-
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+# 删除链表中重复的结点
+# 在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。 
+# 例如，链表1->2->3->3->4->4->5 处理后为 1->2->5。
+# 解：设置两个指针，一个指向当前节点pHead，一个指向下一个节点p，如果这两节点相同，p指向下一节点
+#    直到不同或是末尾。再用递归对pHead更新。
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 class Solution:
     def deleteDuplication(self, pHead):
         # write code here
@@ -19,14 +26,6 @@ class Solution:
             else:
                 return None
         return pHead
-
-
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
 
 if __name__ == '__main__':
     q=ListNode(1)
