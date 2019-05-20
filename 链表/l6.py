@@ -28,7 +28,8 @@ if __name__ == '__main__':
     a=ListNode(5)
     a.next=w
     b=Solution()
-    print b.FindFirstCommonNode(q,a).val
+    res=b.FindFirstCommonNode(q,a)
+    print res.val
 
 
 

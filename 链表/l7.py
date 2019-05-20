@@ -63,7 +63,8 @@ if __name__ == '__main__':
     t.next=y
     y.next=e
     b=Solution()
-    print b.EntryNodeOfLoop(q).val
+    res=b.EntryNodeOfLoop(q)
+    print res.val
 
 
 

@@ -32,6 +32,7 @@ if __name__ == '__main__':
     q.random=e
     w.random=r
     b=Solution()
-    n=b.Clone(q)
-    print n.next.label
+    res=b.Clone(q)
+    print res.label
+    print res.next.label
     
