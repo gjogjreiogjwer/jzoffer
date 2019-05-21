@@ -44,6 +44,6 @@ if __name__ == '__main__':
     q.next=w
     w.next=e
     b=Solution()
-    print b.FindKthToTail(q, 3).val
+    print (b.FindKthToTail(q, 3).val)
 
     

@@ -29,4 +29,4 @@ if __name__ == '__main__':
     q.next=w
     w.next=e
     b=Solution()
-    print b.ReverseList(q).next.next.val
+    print (b.ReverseList(q).next.next.val)

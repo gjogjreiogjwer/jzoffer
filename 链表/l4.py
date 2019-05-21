@@ -36,4 +36,4 @@ if __name__ == '__main__':
     w.next=e
     a.next=b
     b=Solution()
-    print b.Merge(q,a).next.next.val
+    print (b.Merge(q,a).next.next.val)

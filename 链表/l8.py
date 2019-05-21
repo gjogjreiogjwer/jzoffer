@@ -45,10 +45,10 @@ if __name__ == '__main__':
     u.next=i
     b=Solution()
     res=b.deleteDuplication(q)
-    print res.val
-    print res.next.val
-    print res.next.next.val
-    print res.next.next.next
+    print (res.val)
+    print (res.next.val)
+    print (res.next.next.val)
+    print (res.next.next.next)
 
 
 

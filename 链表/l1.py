@@ -25,7 +25,7 @@ if __name__ == '__main__':
     q.next=w
     w.next=e
     b=Solution()
-    print b.printListFromTailToHead(q)
+    print (b.printListFromTailToHead(q))
 
 
 

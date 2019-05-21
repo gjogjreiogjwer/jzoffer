@@ -29,7 +29,7 @@ if __name__ == '__main__':
     a.next=w
     b=Solution()
     res=b.FindFirstCommonNode(q,a)
-    print res.val
+    print (res.val)
 
 
 
