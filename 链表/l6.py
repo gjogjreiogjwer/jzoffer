@@ -13,22 +13,22 @@ class Solution:
         # write code here
         if not pHead1 or not pHead2:
             return None
-        p1,p2=pHead1,pHead2
+        p1, p2 = pHead1, pHead2
         while p1!=p2:
-            p1=p1.next if p1 != None else pHead2
-            p2=p2.next if p2!=None else pHead1
+            p1 = p1.next if p1 != None else pHead2
+            p2 = p2.next if p2 != None else pHead1
         return p1
 
 if __name__ == '__main__':
-    q=ListNode(1)
-    w=ListNode(2)
-    e=ListNode(3)
-    q.next=w
-    w.next=e
-    a=ListNode(5)
-    a.next=w
-    b=Solution()
-    res=b.FindFirstCommonNode(q,a)
+    q = ListNode(1)
+    w = ListNode(2)
+    e = ListNode(3)
+    a = ListNode(5)
+    q.next = w
+    w.next = e
+    a.next = w
+    b = Solution()
+    res = b.FindFirstCommonNode(q,a)
     print (res.val)
 
 

@@ -14,19 +14,19 @@ class Solution:
         # write code here
         if not pHead or not pHead.next:
         	return pHead
-        cur=None
+        cur = None
         while pHead:
-        	temp=pHead
-        	pHead=pHead.next
-        	temp.next=cur
-        	cur=temp
+        	temp = pHead
+        	pHead = pHead.next
+        	temp.next = cur
+        	cur = temp
         return cur
 
 if __name__ == '__main__':
-    q=ListNode(1)
-    w=ListNode(2)
-    e=ListNode(3)
-    q.next=w
-    w.next=e
-    b=Solution()
+    q = ListNode(1)
+    w = ListNode(2)
+    e = ListNode(3)
+    q.next = w
+    w.next = e
+    b = Solution()
     print (b.ReverseList(q).next.next.val)

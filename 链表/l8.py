@@ -13,38 +13,38 @@ class ListNode:
 class Solution:
     def deleteDuplication(self, pHead):
         # write code here
-        if pHead==None or pHead.next==None:
+        if pHead == None or pHead.next == None:
             return pHead
-        p=pHead.next
-        if pHead.val!=p.val:
-            pHead.next=self.deleteDuplication(p)
+        p = pHead.next
+        if pHead.val != p.val:
+            pHead.next = self.deleteDuplication(p)
         else:
-            while p.next!=None and p.val==pHead.val:
-                p=p.next
-            if p.val!=pHead.val:
-                pHead=self.deleteDuplication(p)
+            while p.next != None and p.val == pHead.val:
+                p = p.next
+            if p.val != pHead.val:
+                pHead = self.deleteDuplication(p)
             else:
                 return None
         return pHead
 
 if __name__ == '__main__':
-    q=ListNode(1)
-    w=ListNode(2)
-    e=ListNode(3)
-    r=ListNode(3)
-    t=ListNode(3)
-    y=ListNode(4)
-    u=ListNode(4)
-    i=ListNode(5)
-    q.next=w
-    w.next=e
-    e.next=r
-    r.next=t
-    t.next=y
-    y.next=u
-    u.next=i
-    b=Solution()
-    res=b.deleteDuplication(q)
+    q = ListNode(1)
+    w = ListNode(2)
+    e = ListNode(3)
+    r = ListNode(3)
+    t = ListNode(3)
+    y = ListNode(4)
+    u = ListNode(4)
+    i = ListNode(5)
+    q.next = w
+    w.next = e
+    e.next = r
+    r.next = t
+    t.next = y
+    y.next = u
+    u.next = i
+    b = Solution()
+    res = b.deleteDuplication(q)
     print (res.val)
     print (res.next.val)
     print (res.next.next.val)

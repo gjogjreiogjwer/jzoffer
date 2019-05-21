@@ -16,23 +16,23 @@ class Solution:
         # write code here
         if not pHead:
             return pHead
-        p=RandomListNode(pHead.label)
-        p.random=pHead.random
-        p.next=self.Clone(pHead.next)
+        p = RandomListNode(pHead.label)
+        p.random = pHead.random
+        p.next = self.Clone(pHead.next)
         return p
 
 if __name__ == '__main__':
-    q=RandomListNode(1)
-    w=RandomListNode(2)
-    e=RandomListNode(3)
-    r=RandomListNode(4)
-    q.next=w
-    w.next=e
-    e.next=r
-    q.random=e
-    w.random=r
-    b=Solution()
-    res=b.Clone(q)
+    q = RandomListNode(1)
+    w = RandomListNode(2)
+    e = RandomListNode(3)
+    r = RandomListNode(4)
+    q.next = w
+    w.next = e
+    e.next = r
+    q.random = e
+    w.random = r
+    b = Solution()
+    res = b.Clone(q)
     print (res.label)
     print (res.next.label)
     

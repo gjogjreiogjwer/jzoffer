@@ -13,37 +13,37 @@ class Solution:
     def FindKthToTail(self, head, k):
     	if not head or k<=0:
     		return None
-    	p1=head
-    	p2=head
+    	p1 = head
+    	p2 = head
     	for i in range(k-1):
     		if not p1.next:
     			return None
     		else:
-    			p1=p1.next
+    			p1 = p1.next
     	while p1.next:
-    		p2=p2.next
-    		p1=p1.next
+    		p2 = p2.next
+    		p1 = p1.next
     	return p2
 
 	# 使用列表开辟了新空间
- #    def FindKthToTail(self, head, k):
- #        # write code here
- #        list=[]
- #        while head:
- #            list.append(head)
- #            head=head.next
- #        length=len(list)
- #        if k>length or k<1:
- #            return None
- #        return list[-k]
+    def FindKthToTail1(self, head, k):
+        # write code here
+        list = []
+        while head:
+            list.append(head)
+            head = head.next
+        length = len(list)
+        if k > length or k<1:
+            return None
+        return list[-k]
 
 if __name__ == '__main__':
-    q=ListNode(1)
-    w=ListNode(2)
-    e=ListNode(3)
-    q.next=w
-    w.next=e
-    b=Solution()
+    q = ListNode(1)
+    w = ListNode(2)
+    e = ListNode(3)
+    q.next = w
+    w.next = e
+    b = Solution()
     print (b.FindKthToTail(q, 3).val)
 
     

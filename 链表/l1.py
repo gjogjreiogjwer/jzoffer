@@ -12,19 +12,19 @@ class Solution:
     # 返回从尾部到头部的列表值序列，例如[1,2,3]
     def printListFromTailToHead(self, listNode):
         # write code here
-        res=[]
+        res = []
         while listNode:
             res.insert(0, listNode.val)
-            listNode=listNode.next
+            listNode = listNode.next
         return res
 
 if __name__ == '__main__':
-    q=ListNode(1)
-    w=ListNode(2)
-    e=ListNode(3)
-    q.next=w
-    w.next=e
-    b=Solution()
+    q = ListNode(1)
+    w = ListNode(2)
+    e = ListNode(3)
+    q.next = w
+    w.next = e
+    b = Solution()
     print (b.printListFromTailToHead(q))
 
 
