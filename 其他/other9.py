@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# 扑克牌顺子
 # LL今天心情特别好,因为他去买了一副扑克牌,发现里面居然有2个大王,2个小王(一副牌原本是54张^_^)...
 # 他随机从中抽出了5张牌,想测测自己的手气,看看能不能抽到顺子,如果抽到的话,他决定去买体育彩票,嘿嘿！！
 # “红心A,黑桃3,小王,大王,方片5”,“Oh My God!”不是顺子.....LL不高兴了,他想了想,决定大小 
@@ -6,30 +7,33 @@
 # “So Lucky!”。LL决定去买体育彩票啦。 现在,要求你使用这幅牌模拟上面的过程,然后告诉我们LL的运气如何， 
 # 如果牌能组成顺子就输出true，否则就输出false。为了方便起见,你可以认为大小王是0。
 # 解： 输入5个数；在0-13之间；无重复；大小差值<=5
+
 class Solution:
     def IsContinuous(self, numbers):
         # write code here
-        if len(numbers)<5:
+        if len(numbers) < 5:
         	return False
-        minNum=0
-        maxNum=13
-        flag=0
+        minNum = 0
+        maxNum = 13
+        flag = 0
         for i in numbers:
-        	if i>13 or i<0:
+        	if i > 13 or i < 0:
         		return False
-        	if i==0:
+            #大小王
+        	if i == 0:
         		continue
-        	if (flag>>i) & 1 ==1:
+            #是否重复
+        	if (flag>>i) & 1 == 1:
         		return False
         	flag |= 1<<i
-        	if i <=maxNum:
-        		maxNum=i
-        	if i>=minNum:
-        		minNum=i
-        	if minNum-maxNum>=5:
+        	if i <= maxNum:
+        		maxNum = i
+        	if i >= minNum:
+        		minNum = i
+        	if minNum-maxNum >= 5:
         		return False
         return True
 
 if __name__ == '__main__':
-	b=Solution()
-	print b.IsContinuous([1,2,5,0,0])
+	b = Solution()
+	print (b.IsContinuous([1,2,5,0,0]))
