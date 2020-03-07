@@ -1,5 +1,5 @@
-# 来自牛客网剑指offer
-# UML:https://www.nowcoder.com/ta/coding-interviews
+# 剑指offer
+# UML:https://leetcode-cn.com/problemset/lcof/
 # 目录：
 数组（11道）：  
 a1:二维数组中的查找  
