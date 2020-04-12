@@ -24,6 +24,14 @@ class Solution(object):
         else:
             return 0
 
+    # 解法2：
+    def search(self, nums, target):
+        import collections
+        res = collections.defaultdict(int)
+        for num in nums:
+            res[num] += 1
+        return res[target]
+
 if __name__ == '__main__':
     a = Solution()
     print (a.search([5,7,7,8,8,10], 8))
